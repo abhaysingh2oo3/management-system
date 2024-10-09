@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<element>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         id="WebApp_ID" version="6.0">
+
+    <display-name>Vendor Management System</display-name>
+
+    <welcome-file-list>
+        <welcome-file>login.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!-- Servlet for User Login -->
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>controller.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- Servlet for Adding Vendor -->
+    <servlet>
+        <servlet-name>AddVendorServlet</servlet-name>
+        <servlet-class>controller.AddVendorServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddVendorServlet</servlet-name>
+        <url-pattern>/AddVendorServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- Servlet for Managing Vendor -->
+    <servlet>
+        <servlet-name>ManageVendorServlet</servlet-name>
+        <servlet-class>controller.ManageVendorServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ManageVendorServlet</servlet-name>
+        <url-pattern>/ManageVendorServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- Servlet for Changing Password -->
+    <servlet>
+        <servlet-name>ChangePasswordServlet</servlet-name>
+        <servlet-class>controller.ChangePasswordServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ChangePasswordServlet</servlet-name>
+        <url-pattern>/ChangePasswordServlet</url-pattern>
+    </servlet-mapping>
+    
+</web-app>
+
+</element>
